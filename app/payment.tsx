@@ -13,28 +13,28 @@ export default function PaymentScreen() {
         {
             id: 1,
             title: 'Pix',
-            description: 'Instant transfers, 24/7.',
+            description: 'Transferências instantâneas, 24/7.',
             icon: <PixIcon size={24} color="#000" />,
             route: '/transfer'
         },
         {
             id: 2,
-            title: 'Pay Boleto',
-            description: 'Pay electricity, water, internet bills.',
+            title: 'Pagar Boleto',
+            description: 'Pague contas de luz, água, internet.',
             icon: <Barcode color="#000" size={24} />,
             route: '/boleto'
         },
         {
             id: 3,
-            title: 'Transfer via PayPal',
-            description: 'International transfers made easy.',
+            title: 'Transferir via PayPal',
+            description: 'Transferências internacionais fáceis.',
             icon: <PayPalIcon size={24} color="#000" />,
             route: '/transfer'
         },
         {
             id: 4,
-            title: 'Card Bill',
-            description: 'Pay your credit card invoice.',
+            title: 'Fatura do Cartão',
+            description: 'Pague a fatura do seu cartão.',
             icon: <CreditCard color="#000" size={24} />,
             route: '/card-bill'
         },
@@ -51,7 +51,7 @@ export default function PaymentScreen() {
                 </View>
 
                 <ScrollView style={styles.content}>
-                    <Text style={styles.title}>Payment Area</Text>
+                    <Text style={styles.title}>Área de Pagamentos</Text>
 
                     <View style={styles.grid}>
                         {options.map((option) => (

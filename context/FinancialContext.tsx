@@ -58,7 +58,7 @@ export const FinancialProvider = ({ children }: { children: ReactNode }) => {
             addTransaction({
                 type: 'payment',
                 amount: invoiceAmount,
-                recipient: 'Card Bill Payment',
+                recipient: 'Pagamento de Fatura',
             });
             setCreditLimit((prev) => prev + invoiceAmount);
             setInvoiceAmount(0);
@@ -75,14 +75,14 @@ export const FinancialProvider = ({ children }: { children: ReactNode }) => {
                 id: Math.random().toString(),
                 type: 'transfer',
                 amount: 1000,
-                recipient: 'Initial Deposit',
+                recipient: 'Depósito Inicial',
                 date: new Date().toISOString(),
             },
             {
                 id: Math.random().toString(),
                 type: 'payment',
                 amount: 450.25,
-                recipient: 'Supermarket Purchase',
+                recipient: 'Compra no Supermercado',
                 date: new Date(Date.now() - 86400000).toISOString(), // Yesterday
             }
         ]);

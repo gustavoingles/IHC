@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, Alert } from 'react-native';
 import { Colors } from '../constants/Colors';
-import { Eye, EyeOff, HelpCircle, Mail } from 'lucide-react-native';
+import { Eye, EyeOff, HelpCircle, Mail, User } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { useFinancial } from '../context/FinancialContext';
@@ -19,10 +19,7 @@ export const Header = () => {
                 <View style={styles.content}>
                     <View style={styles.topRow}>
                         <TouchableOpacity style={styles.profileButton}>
-                            <Image
-                                source={require('../assets/profile.png')}
-                                style={styles.profileImage}
-                            />
+                            <User color="#FFF" size={24} />
                         </TouchableOpacity>
                         <View style={styles.rightIcons}>
                             <TouchableOpacity style={styles.iconButton} onPress={toggleBalanceVisibility}>
@@ -37,7 +34,7 @@ export const Header = () => {
                             </TouchableOpacity>
                         </View>
                     </View>
-                    <Text style={styles.greeting}>Hello, {user?.firstName || 'Guest'}</Text>
+                    <Text style={styles.greeting}>Olá, {user?.firstName || 'Visitante'}</Text>
                 </View>
             </SafeAreaView>
         </View>

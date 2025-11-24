@@ -13,7 +13,7 @@ export default function LoginScreen() {
 
     const handleLogin = () => {
         if (!cpf) {
-            Alert.alert('Error', 'Please enter your CPF.');
+            Alert.alert('Erro', 'Por favor, digite seu CPF.');
             return;
         }
         // Mock login with existing user data simulation
@@ -29,8 +29,8 @@ export default function LoginScreen() {
                 </TouchableOpacity>
 
                 <View style={styles.content}>
-                    <Text style={styles.title}>Login</Text>
-                    <Text style={styles.subtitle}>Enter your CPF to access your account.</Text>
+                    <Text style={styles.title}>Entrar</Text>
+                    <Text style={styles.subtitle}>Digite seu CPF para acessar sua conta.</Text>
 
                     <TextInput
                         style={styles.input}
@@ -42,7 +42,7 @@ export default function LoginScreen() {
                     />
 
                     <TouchableOpacity style={styles.button} onPress={handleLogin}>
-                        <Text style={styles.buttonText}>Continue</Text>
+                        <Text style={styles.buttonText}>Continuar</Text>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>

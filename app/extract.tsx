@@ -20,10 +20,10 @@ export default function ExtractScreen() {
                 )}
             </View>
             <View style={styles.details}>
-                <Text style={styles.recipient}>Transfer to {item.recipient}</Text>
+                <Text style={styles.recipient}>Transferência para {item.recipient}</Text>
                 <Text style={styles.date}>{new Date(item.date).toLocaleDateString()}</Text>
             </View>
-            <Text style={styles.amount}>-${item.amount.toFixed(2)}</Text>
+            <Text style={styles.amount}>-R$ {item.amount.toFixed(2)}</Text>
         </View>
     );
 
@@ -37,10 +37,10 @@ export default function ExtractScreen() {
                 </View>
 
                 <View style={styles.content}>
-                    <Text style={styles.title}>Account Statement</Text>
+                    <Text style={styles.title}>Extrato da Conta</Text>
 
                     {transactions.length === 0 ? (
-                        <Text style={styles.emptyText}>No transactions yet.</Text>
+                        <Text style={styles.emptyText}>Nenhuma transação ainda.</Text>
                     ) : (
                         <FlatList
                             data={transactions}

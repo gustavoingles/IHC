@@ -9,10 +9,10 @@ export const ActionList = () => {
     const router = useRouter();
 
     const actions = [
-        { id: 1, label: 'Pix Payment', icon: <PixIcon size={24} color="#000" />, route: '/transfer' },
-        { id: 2, label: 'Boleto Payment', icon: <Barcode color="#000" size={24} />, route: '/boleto' },
-        { id: 3, label: 'Transfer', icon: <PayPalIcon size={24} color="#000" />, route: '/transfer' },
-        { id: 4, label: 'Card', icon: <CreditCard color="#000" size={24} />, route: '/card-bill' },
+        { id: 1, label: 'Área Pix', icon: <PixIcon size={24} color="#000" />, route: '/transfer' },
+        { id: 2, label: 'Pagar Boleto', icon: <Barcode color="#000" size={24} />, route: '/boleto' },
+        { id: 3, label: 'Transferir', icon: <PayPalIcon size={24} color="#000" />, route: '/transfer' },
+        { id: 4, label: 'Cartão', icon: <CreditCard color="#000" size={24} />, route: '/card-bill' },
     ];
 
     return (

@@ -16,11 +16,11 @@ export default function AmountScreen() {
     const handleTransfer = () => {
         const value = parseFloat(amount);
         if (isNaN(value) || value <= 0) {
-            Alert.alert('Invalid Amount', 'Please enter a valid amount.');
+            Alert.alert('Valor Inválido', 'Por favor, digite um valor válido.');
             return;
         }
         if (value > balance) {
-            Alert.alert('Insufficient Funds', 'You do not have enough balance.');
+            Alert.alert('Saldo Insuficiente', 'Você não tem saldo suficiente.');
             return;
         }
 
@@ -43,8 +43,8 @@ export default function AmountScreen() {
                 </View>
 
                 <View style={styles.content}>
-                    <Text style={styles.title}>How much do you want to transfer to {recipient}?</Text>
-                    <Text style={styles.balance}>Available balance: ${balance.toFixed(2)}</Text>
+                    <Text style={styles.title}>Quanto você quer transferir para {recipient}?</Text>
+                    <Text style={styles.balance}>Saldo disponível: R$ {balance.toFixed(2)}</Text>
 
                     <View style={styles.inputContainer}>
                         <Text style={styles.currency}>$</Text>

@@ -14,14 +14,14 @@ export default function BoletoScreen() {
 
     const handlePay = () => {
         if (!code) {
-            Alert.alert('Error', 'Please enter the boleto code.');
+            Alert.alert('Erro', 'Por favor, digite o código do boleto.');
             return;
         }
 
         // Simple validation: Check if code is numeric and has sufficient length (e.g., 44 digits is standard, but let's say > 20 for flexibility)
         const cleanCode = code.replace(/[^0-9]/g, '');
         if (cleanCode.length < 20) {
-            Alert.alert('Error', 'Invalid boleto code. Please check the digits.');
+            Alert.alert('Erro', 'Código inválido. Verifique os dígitos.');
             return;
         }
 
@@ -29,14 +29,14 @@ export default function BoletoScreen() {
         const amount = 50 + Math.random() * 100; // Random amount between 50 and 150
 
         if (balance < amount) {
-            setError("You don't have enough balance to make such operation");
+            setError("Você não tem saldo suficiente para realizar esta operação");
             return;
         }
 
         addTransaction({
             type: 'payment',
             amount: amount,
-            recipient: 'Boleto Payment',
+            recipient: 'Pagamento de Boleto',
         });
 
         router.push('/confirmation');
@@ -52,13 +52,13 @@ export default function BoletoScreen() {
                 </View>
 
                 <View style={styles.content}>
-                    <Text style={styles.title}>Pay Boleto</Text>
-                    <Text style={styles.subtitle}>Enter the boleto barcode number below.</Text>
+                    <Text style={styles.title}>Pagar Boleto</Text>
+                    <Text style={styles.subtitle}>Digite o código de barras do boleto abaixo.</Text>
 
                     <TextInput
                         style={styles.input}
                         placeholder="0000.0000.0000.0000"
-                        placeholderTextColor={Colors.gray}
+                        placeholderTextColor={Colors.textSecondary}
                         keyboardType="numeric"
                         value={code}
                         onChangeText={(text) => {
@@ -70,7 +70,7 @@ export default function BoletoScreen() {
                     {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
                     <TouchableOpacity style={styles.button} onPress={handlePay}>
-                        <Text style={styles.buttonText}>Pay Boleto</Text>
+                        <Text style={styles.buttonText}>Pagar Boleto</Text>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>

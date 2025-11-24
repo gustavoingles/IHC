@@ -39,10 +39,10 @@ export default function HomeScreen() {
 
                 {/* Balance Section */}
                 <View style={styles.balanceContainer}>
-                    <Text style={styles.balanceLabel}>Account Balance</Text>
+                    <Text style={styles.balanceLabel}>Saldo da Conta</Text>
                     <View style={styles.balanceRow}>
                         <Text style={styles.balanceValue}>
-                            {isBalanceVisible ? `$ ${balance.toFixed(2)}` : '••••'}
+                            {isBalanceVisible ? `R$ ${balance.toFixed(2)}` : '••••'}
                         </Text>
                         <TouchableOpacity onPress={() => router.push('/extract')}>
                             <ChevronRight color={Colors.text} size={24} />
@@ -55,9 +55,9 @@ export default function HomeScreen() {
                 <View style={styles.divider} />
 
                 <InfoCard
-                    title="Credit Card Limit"
+                    title="Limite do Cartão de Crédito"
                     value={`R$ ${creditLimit.toFixed(2)}`}
-                    description="Available limit for purchases."
+                    description="Limite disponível para compras."
                 />
 
             </ScrollView>

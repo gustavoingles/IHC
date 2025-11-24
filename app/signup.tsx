@@ -31,16 +31,16 @@ export default function SignupScreen() {
 
     const handleSignup = () => {
         if (!firstName || !surname || !cpf) {
-            Alert.alert('Error', 'Please fill in all fields.');
+            Alert.alert('Erro', 'Por favor, preencha todos os campos.');
             return;
         }
         if (firstName.length <= 2 || surname.length <= 2) {
-            Alert.alert('Error', 'Name and Surname must be more than 2 letters.');
+            Alert.alert('Erro', 'Nome e Sobrenome devem ter mais de 2 letras.');
             return;
         }
         if (!validateCPF(cpf)) {
-             Alert.alert('Error', 'Invalid CPF.');
-             return;
+            Alert.alert('Erro', 'CPF Inválido.');
+            return;
         }
 
         login(firstName, surname, cpf);
@@ -51,11 +51,11 @@ export default function SignupScreen() {
         <View style={styles.container}>
             <SafeAreaView style={styles.safeArea}>
                 <View style={styles.logoContainer}>
-                    <Text style={styles.logoText}>NuClone</Text>
+                    <Text style={styles.logoText}>Simplo</Text>
                 </View>
 
                 <View style={styles.form}>
-                    <Text style={styles.label}>First Name</Text>
+                    <Text style={styles.label}>Nome</Text>
                     <TextInput
                         style={styles.input}
                         placeholder="Ex: Juan"
@@ -64,7 +64,7 @@ export default function SignupScreen() {
                         onChangeText={setFirstName}
                     />
 
-                    <Text style={styles.label}>Surname</Text>
+                    <Text style={styles.label}>Sobrenome</Text>
                     <TextInput
                         style={styles.input}
                         placeholder="Ex: Carlos"
@@ -84,11 +84,11 @@ export default function SignupScreen() {
                     />
 
                     <TouchableOpacity style={styles.button} onPress={handleSignup}>
-                        <Text style={styles.buttonText}>Sign Up</Text>
+                        <Text style={styles.buttonText}>Cadastrar</Text>
                     </TouchableOpacity>
-                    
+
                     <TouchableOpacity style={styles.linkButton} onPress={() => router.push('/login')}>
-                        <Text style={styles.linkText}>Already have an account? Login</Text>
+                        <Text style={styles.linkText}>Já tem uma conta? Entrar</Text>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>

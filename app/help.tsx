@@ -11,22 +11,22 @@ export default function HelpScreen() {
     const contactOptions = [
         {
             id: 1,
-            label: 'Call Us',
+            label: 'Ligue para nós',
             value: '0800 123 4567',
             icon: <Phone color={Colors.primary} size={24} />,
             action: () => Linking.openURL('tel:08001234567')
         },
         {
             id: 2,
-            label: 'Email Us',
-            value: 'help@nuclone.com',
+            label: 'Envie um e-mail',
+            value: 'ajuda@simplo.com',
             icon: <Mail color={Colors.primary} size={24} />,
             action: () => Linking.openURL('mailto:help@nuclone.com')
         },
         {
             id: 3,
-            label: 'Website',
-            value: 'www.nuclone.com',
+            label: 'Site',
+            value: 'www.simplo.com',
             icon: <Globe color={Colors.primary} size={24} />,
             action: () => Linking.openURL('https://www.nuclone.com')
         },
@@ -42,8 +42,8 @@ export default function HelpScreen() {
                 </View>
 
                 <View style={styles.content}>
-                    <Text style={styles.title}>Help Center</Text>
-                    <Text style={styles.subtitle}>Need assistance? Contact us through any of the channels below.</Text>
+                    <Text style={styles.title}>Central de Ajuda</Text>
+                    <Text style={styles.subtitle}>Precisa de ajuda? Entre em contato por um dos canais abaixo.</Text>
 
                     <View style={styles.optionsContainer}>
                         {contactOptions.map((option) => (

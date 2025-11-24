@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+# Simplo (NubankVei)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> **Projeto de Interface Humano-Computador (IHC)**
+> *Um clone do Nubank focado em acessibilidade para a terceira idade.*
 
-## Get started
+## 👵 Sobre o Projeto
 
-1. Install dependencies
+O **Simplo** (anteriormente "NubankVei") é uma reimaginação do aplicativo do Nubank, projetada especificamente para **pessoas idosas**.
 
+Sabemos que interfaces bancárias modernas podem ser confusas, com ícones pequenos, navegação complexa e excesso de informações. O Simplo resolve isso com:
+- **Fontes grandes e legíveis**: Para facilitar a leitura.
+- **Contraste aprimorado**: Cores vibrantes (Laranja) e fundos claros.
+- **Navegação simplificada**: Menos opções na tela, focando no essencial (Saldo, Transferência, Pagamentos).
+- **Feedback claro**: Mensagens de confirmação e erro explícitas e amigáveis.
+- **Linguagem acessível**: Termos simples e diretos, evitando jargões técnicos.
+
+Este projeto demonstra como princípios de IHC podem ser aplicados para incluir digitalmente a população sênior.
+
+---
+
+## 🚀 Como Acessar e Testar
+
+Você pode testar o aplicativo de três formas diferentes, dependendo da sua preferência:
+
+### 1. Versão Web (Acesso Imediato)
+Acesse o aplicativo diretamente pelo navegador, sem instalar nada. Ideal para uma visualização rápida.
+
+🔗 **Link de Acesso:** [https://simplo-6rw007jjl-gustavos-projects-0d432d51.vercel.app](https://simplo-6rw007jjl-gustavos-projects-0d432d51.vercel.app)
+
+### 2. Aplicativo Móvel (Android e iOS)
+Para a experiência nativa completa, você pode gerar o aplicativo para o seu celular usando o EAS (Expo Application Services).
+
+**Pré-requisitos:**
+- Conta na Expo.
+- EAS CLI instalado (`npm install -g eas-cli`).
+
+**Passos para gerar o APK (Android):**
+1. No terminal, execute:
+   ```bash
+   eas build -p android --profile preview
+   ```
+2. Escaneie o QR Code gerado ou baixe o APK pelo link fornecido.
+
+**Passos para iOS (Simulador):**
+1. No terminal, execute:
+   ```bash
+   eas build -p ios --profile preview
+   ```
+2. Baixe o arquivo e arraste para o Simulador iOS.
+
+### 3. Execução Local (Desenvolvimento)
+Se você quiser rodar o código fonte na sua máquina ou testar no seu celular via Expo Go.
+
+1. Instale as dependências:
    ```bash
    npm install
    ```
-
-2. Start the app
-
+2. Inicie o servidor de desenvolvimento (modo Tunnel para maior compatibilidade):
    ```bash
-   npx expo start
+   npx expo start --tunnel
    ```
+3. Escaneie o QR Code com o aplicativo **Expo Go** (disponível na App Store e Google Play).
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📱 Funcionalidades Principais
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Login Simplificado**: Acesso apenas com CPF (simulado).
+- **Home Intuitiva**: Saldo visível/ocultável e acesso rápido a ações.
+- **Transferência Pix**: Fluxo passo-a-passo (Quem -> Quanto -> Confirmar).
+- **Pagamento de Boletos**: Digitação de código com validação clara.
+- **Extrato**: Histórico de transações com ícones grandes e descrições claras.
+- **Ajuda**: Acesso fácil a canais de suporte (Telefone, Email).
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🛠️ Tecnologias Utilizadas
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **React Native** (Expo)
+- **TypeScript**
+- **Expo Router** (Navegação)
+- **Lucide React Native** (Ícones)

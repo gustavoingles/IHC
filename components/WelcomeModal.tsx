@@ -18,21 +18,21 @@ export const WelcomeModal = ({ visible, onClose, userName }: WelcomeModalProps) 
         >
             <View style={styles.overlay}>
                 <View style={styles.modalContainer}>
-                    <Text style={styles.title}>Welcome to your new financial life</Text>
+                    <Text style={styles.title}>Bem-vindo à sua nova vida financeira</Text>
 
                     <Text style={styles.message}>
-                        Hello, {userName}! We are thrilled to have you with us.
-                        Explore the app to manage your finances, pay bills, and track your expenses with ease.
+                        Olá, {userName}! Estamos felizes em ter você conosco.
+                        Explore o app para gerenciar suas finanças, pagar contas e acompanhar seus gastos com facilidade.
                     </Text>
 
                     <View style={styles.divider} />
 
                     <Text style={styles.subMessage}>
-                        Your journey to financial freedom starts now.
+                        Sua jornada para a liberdade financeira começa agora.
                     </Text>
 
                     <TouchableOpacity style={styles.button} onPress={onClose}>
-                        <Text style={styles.buttonText}>Get Started</Text>
+                        <Text style={styles.buttonText}>Começar</Text>
                     </TouchableOpacity>
                 </View>
             </View>

@@ -14,7 +14,7 @@ export default function ReceiptScreen() {
     const handleShare = async () => {
         try {
             await Share.share({
-                message: `Transfer receipt to ${lastTransaction?.recipient} of $${lastTransaction?.amount.toFixed(2)}`,
+                message: `Comprovante de transferência para ${lastTransaction?.recipient} de R$ ${lastTransaction?.amount.toFixed(2)}`,
             });
         } catch (error) {
             console.error(error);
@@ -31,7 +31,7 @@ export default function ReceiptScreen() {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.content}>
-                        <Text style={styles.title}>No transaction found.</Text>
+                        <Text style={styles.title}>Nenhuma transação encontrada.</Text>
                     </View>
                 </SafeAreaView>
             </View>
@@ -51,22 +51,22 @@ export default function ReceiptScreen() {
                 </View>
 
                 <View style={styles.content}>
-                    <Text style={styles.title}>Transfer Receipt</Text>
+                    <Text style={styles.title}>Comprovante de Transferência</Text>
                     <Text style={styles.date}>{new Date(lastTransaction.date).toLocaleString()}</Text>
 
                     <View style={styles.amountContainer}>
-                        <Text style={styles.amountLabel}>Amount Transferred</Text>
-                        <Text style={styles.amount}>${lastTransaction.amount.toFixed(2)}</Text>
+                        <Text style={styles.amountLabel}>Valor Transferido</Text>
+                        <Text style={styles.amount}>R$ {lastTransaction.amount.toFixed(2)}</Text>
                     </View>
 
                     <View style={styles.detailsContainer}>
-                        <Text style={styles.detailLabel}>Recipient</Text>
+                        <Text style={styles.detailLabel}>Destinatário</Text>
                         <Text style={styles.detailValue}>{lastTransaction.recipient}</Text>
 
                         <View style={styles.separator} />
 
-                        <Text style={styles.detailLabel}>Payment Method</Text>
-                        <Text style={styles.detailValue}>NuAccount Balance</Text>
+                        <Text style={styles.detailLabel}>Forma de Pagamento</Text>
+                        <Text style={styles.detailValue}>Saldo da Conta</Text>
                     </View>
                 </View>
             </SafeAreaView>

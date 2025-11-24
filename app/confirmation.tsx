@@ -24,17 +24,17 @@ export default function ConfirmationScreen() {
                     <View style={styles.iconContainer}>
                         <Check color="#FFF" size={40} />
                     </View>
-                    <Text style={styles.title}>Transfer successful!</Text>
-                    <Text style={styles.subtitle}>Your money has been sent.</Text>
+                    <Text style={styles.title}>Transferência realizada!</Text>
+                    <Text style={styles.subtitle}>Seu dinheiro foi enviado.</Text>
                 </View>
 
                 <View style={styles.footer}>
                     <TouchableOpacity style={styles.receiptButton} onPress={handleViewReceipt}>
-                        <Text style={styles.receiptButtonText}>View Receipt</Text>
+                        <Text style={styles.receiptButtonText}>Ver Comprovante</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.homeButton} onPress={handleGoHome}>
-                        <Text style={styles.homeButtonText}>Back to Home</Text>
+                        <Text style={styles.homeButtonText}>Voltar ao Início</Text>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>

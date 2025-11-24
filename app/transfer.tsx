@@ -18,7 +18,7 @@ export default function TransferScreen() {
 
     const handleNext = () => {
         if (!recipient) {
-            Alert.alert('Error', 'Please enter a name, email, or CPF.');
+            Alert.alert('Erro', 'Por favor, digite um nome, email ou CPF.');
             return;
         }
         router.push({ pathname: '/transfer/amount', params: { recipient } });
@@ -39,14 +39,14 @@ export default function TransferScreen() {
                 </View>
 
                 <View style={styles.content}>
-                    <Text style={styles.title}>For whom do you want to make a transfer?</Text>
+                    <Text style={styles.title}>Para quem você deseja transferir?</Text>
 
                     <View style={styles.inputContainer}>
-                        <Text style={styles.inputLabel}>Payment data:</Text>
+                        <Text style={styles.inputLabel}>Dados do pagamento:</Text>
                         <View style={styles.inputRow}>
                             <TextInput
                                 style={styles.input}
-                                placeholder="Name, PayPal, PicPay, etc..."
+                                placeholder="Nome, PayPal, PicPay, etc..."
                                 placeholderTextColor={Colors.textSecondary}
                                 value={recipient}
                                 onChangeText={setRecipient}
@@ -77,7 +77,7 @@ export default function TransferScreen() {
 
                     <View style={styles.footerLine} />
                     <Text style={styles.footerText}>
-                        The list above represents your most frequent payment contacts
+                        A lista acima representa seus contatos frequentes
                     </Text>
                 </View>
             </SafeAreaView>

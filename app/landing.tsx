@@ -12,14 +12,18 @@ export default function LandingScreen() {
             <SafeAreaView style={styles.safeArea}>
                 <View style={styles.logoContainer}>
                     <View style={styles.logoPlaceholder}>
-                        <Text style={styles.logoText}>Nu</Text>
+                        <Text style={styles.logoText}>Simplo</Text>
                     </View>
-                    <Text style={styles.title}>A complete world of financial services</Text>
+                    <Text style={styles.title}>Um mundo completo de serviços financeiros</Text>
                 </View>
 
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.primaryButton} onPress={() => router.push('/signup')}>
-                        <Text style={styles.primaryButtonText}>Start</Text>
+                        <Text style={styles.primaryButtonText}>Começar</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.secondaryButton} onPress={() => router.push('/login')}>
+                        <Text style={styles.secondaryButtonText}>Entrar</Text>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>
@@ -43,7 +47,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     logoPlaceholder: {
-        width: 80,
+        width: 120,
         height: 80,
         backgroundColor: '#FFF',
         borderRadius: 20, // Squircleish
@@ -53,7 +57,7 @@ const styles = StyleSheet.create({
     },
     logoText: {
         color: Colors.primary,
-        fontSize: 40,
+        fontSize: 28,
         fontWeight: 'bold',
     },
     title: {

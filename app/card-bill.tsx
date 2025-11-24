@@ -13,11 +13,11 @@ export default function CardBillScreen() {
 
     const handlePay = () => {
         if (invoiceAmount <= 0) {
-            Alert.alert('Info', 'No invoice to pay.');
+            Alert.alert('Info', 'Nenhuma fatura para pagar.');
             return;
         }
         if (balance < invoiceAmount) {
-            setError("You don't have enough balance to make such operation");
+            setError("Você não tem saldo suficiente para realizar esta operação");
             return;
         }
 
@@ -35,11 +35,11 @@ export default function CardBillScreen() {
                 </View>
 
                 <View style={styles.content}>
-                    <Text style={styles.title}>Card Bill</Text>
-                    <Text style={styles.subtitle}>Current Invoice</Text>
+                    <Text style={styles.title}>Fatura do Cartão</Text>
+                    <Text style={styles.subtitle}>Fatura Atual</Text>
 
-                    <Text style={styles.amount}>$ {invoiceAmount.toFixed(2)}</Text>
-                    <Text style={styles.dueDate}>Due on Nov 25</Text>
+                    <Text style={styles.amount}>R$ {invoiceAmount.toFixed(2)}</Text>
+                    <Text style={styles.dueDate}>Vence em 25 Nov</Text>
 
                     <View style={{ flex: 1 }} />
 
@@ -47,11 +47,11 @@ export default function CardBillScreen() {
 
                     {invoiceAmount > 0 ? (
                         <TouchableOpacity style={styles.button} onPress={handlePay}>
-                            <Text style={styles.buttonText}>Pay Invoice</Text>
+                            <Text style={styles.buttonText}>Pagar Fatura</Text>
                         </TouchableOpacity>
                     ) : (
                         <View style={[styles.button, { backgroundColor: Colors.success }]}>
-                            <Text style={styles.buttonText}>Bill Paid</Text>
+                            <Text style={styles.buttonText}>Fatura Paga</Text>
                         </View>
                     )}
                 </View>
