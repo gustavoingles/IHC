@@ -25,7 +25,8 @@ Você pode testar o aplicativo de três formas diferentes, dependendo da sua pre
 ### 1. Versão Web (Acesso Imediato)
 Acesse o aplicativo diretamente pelo navegador, sem instalar nada. Ideal para uma visualização rápida.
 
-🔗 **Link de Acesso:** [https://simplo-aexnnhab4-gustavos-projects-0d432d51.vercel.app](https://simplo-aexnnhab4-gustavos-projects-0d432d51.vercel.app)
+🔗 **Link de Acesso (Vercel):** [https://simplo-aexnnhab4-gustavos-projects-0d432d51.vercel.app](https://simplo-aexnnhab4-gustavos-projects-0d432d51.vercel.app)
+🔗 **Link de Acesso (GitHub Pages):** [https://gustavoingles.github.io/IHC](https://gustavoingles.github.io/IHC)
 
 ### 2. Aplicativo Móvel (Android e iOS)
 Para a experiência nativa completa, você pode gerar o aplicativo para o seu celular usando o EAS (Expo Application Services).
