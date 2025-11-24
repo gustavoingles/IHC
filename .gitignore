@@ -37,8 +37,11 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+.vscode
 
 # generated native folders
 /ios
 /android
 .vercel
+
+vercel.json
