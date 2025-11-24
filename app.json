@@ -7,7 +7,7 @@
     "icon": "./assets/images/icon.png",
     "scheme": "nubankvei",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": false,
+    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.gustavingostosin.simplo",
@@ -43,11 +43,23 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "2.0.21",
+            "gradleDaemonJvmArgs": [
+              "-Xmx4g",
+              "-Dfile.encoding=UTF-8"
+            ]
+          }
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
-      "reactCompiler": true
+      "baseUrl": "/IHC"
     },
     "extra": {
       "router": {},
